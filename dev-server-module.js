@@ -47,8 +47,19 @@ module.exports = {
             };
             app.use(WebpackDevMiddleware(webpack(webpackConf), webpackDevConf));
         }
+        function registerProxy() {
+            var source = new RegExp("(^/)(?!(api)|(static)).*");
+            var proxyOptions = {target: "http://localhost:8123/", ws: true};
+            console.log("proxying ", source, "=>", proxyOptions.target);
+            app.all(source, function(req, res, next) {
+                httpProxy.web(req, res, proxyOptions, function(err) {
+                    console.error("cannot proxy to " + proxyOptions.target + " (" + err.message + ")");
+                });
+            });
 
+        }
         //registerWebpack();
+        registerProxy();
         registerStatic();
     }
 };
