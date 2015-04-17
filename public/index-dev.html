@@ -3,11 +3,31 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.css" rel="stylesheet">
         <script src="lib/require.js" data-main="require.config.dev.js"></script>
+
     </head>
-    <body>
-        loading...
+    <body ng-app="exampleApplication" ng-view="">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <customer />
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <example />
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

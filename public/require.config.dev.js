@@ -1,11 +1,12 @@
 require.config({
     paths: {
+        "angular": "/static/portal/0.0/lib/angular",
         "react": "/static/portal/0.0/lib/react-with-addons",
         "react-bootstrap": "/static/portal/0.0/lib/react-bootstrap",
-        "example": "/static/example/0.0/index-react"
+        "ngReact": "/static/portal/0.0/lib/ngReact",
+        "example": "/static/example/0.0"
     }
 });
-require(['example', 'react'], function(Example, React) {
+require(['example/index-angular'], function(Example) {
     console.log(Example);
-    React.render(React.createElement(Example.Account, null), document.body);
 });

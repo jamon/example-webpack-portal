@@ -7,7 +7,26 @@
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
         <script src="lib/require.js" data-main="require.config.js"></script>
     </head>
-    <body>
-        loading...
+    <body ng-view="">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <customer />
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <example />
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

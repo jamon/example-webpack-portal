@@ -15,7 +15,9 @@ module.exports = {
         }]
     },
     externals: {
-         'lib/react': "amd react"
+         'lib/angular': "amd angular",
+         'lib/react': "amd react",
+         'lib/ngReact': "amd ngReact"
     },
     plugins: [
         new webpack.OldWatchingPlugin(),
