@@ -7,5 +7,5 @@ require.config({
 });
 require(['example', 'react'], function(Example, React) {
     console.log(Example);
-    React.render(React.createElement(Example.Test, null), document.body);
+    React.render(React.createElement(Example.Account, null), document.body);
 });
