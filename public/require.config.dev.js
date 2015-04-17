@@ -5,6 +5,9 @@ require.config({
         "react-bootstrap": "/static/portal/0.0/lib/react-bootstrap",
         "ngReact": "/static/portal/0.0/lib/ngReact",
         "example": "/static/example/0.0"
+    },
+    shim : {
+        angular: {exports: 'angular'}
     }
 });
 require(['example/index-angular'], function(Example) {
